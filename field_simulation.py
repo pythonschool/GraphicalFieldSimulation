@@ -6,6 +6,7 @@ from graphic_wheat_item_class import *
 from graphic_potato_item_class import *
 from graphic_cow_item_class import *
 from graphic_sheep_item_class import *
+from graphic_drag_label_class import *
 
 import sys
 
@@ -15,6 +16,34 @@ class FieldWindow(QMainWindow):
 	def __init__(self):
 		super().__init__()
 		self.setWindowTitle("Field Simulation")
+
+		#create toolbars
+		self.crop_tool_bar = QToolBar()
+		self.animal_tool_bar = QToolBar()
+
+		#create toolbar labels
+		self.wheat_label = WheatDragLabel()
+		self.wheat_label.setToolTip("Add Wheat")
+
+		self.potato_label = PotatoDragLabel()
+		self.potato_label.setToolTip("Add Potato")
+
+		self.cow_label = CowDragLabel()
+		self.cow_label.setToolTip("Add Cow")
+
+		self.sheep_label = SheepDragLabel()
+		self.sheep_label.setToolTip("Add Sheep")
+
+		#add labels to toolbars
+		self.crop_tool_bar.addWidget(self.wheat_label)
+		self.crop_tool_bar.addWidget(self.potato_label)
+
+		self.animal_tool_bar.addWidget(self.cow_label)
+		self.animal_tool_bar.addWidget(self.sheep_label)
+
+		#add toolbars to window
+		self.addToolBar(self.crop_tool_bar)
+		self.addToolBar(self.animal_tool_bar)
 
 		self.field_graphics_view = QGraphicsView()
 		self.field_graphics_view.setScene(FieldGraphicsScene(1,5))
