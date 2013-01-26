@@ -1,4 +1,4 @@
-from PyQt4.QtGui import QPixmap, QGraphicsPixmapItem, QGraphicsItem
+from PyQt4.QtGui import QPixmap, QGraphicsPixmapItem, QGraphicsItem, QMenu
 
 class FieldItemGraphicsPixmapItem(QGraphicsPixmapItem):
 	"""this class provides a pixmap item with a preset image for the item"""

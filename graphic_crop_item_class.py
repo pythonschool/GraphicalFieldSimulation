@@ -20,3 +20,16 @@ class CropGraphicsPixmapItem(FieldItemGraphicsPixmapItem):
 			self.setPixmap(QPixmap(self.available_graphics[3]).scaledToWidth(25,1))
 		elif self.crop._status == "Old":
 			self.setPixmap(QPixmap(self.available_graphics[4]).scaledToWidth(25,1))	
+
+	def _harvest_crop(self):
+		self.scene().harvest_crop(self)
+
+	def contextMenuEvent(self,event):
+		menu = QMenu("Crop")
+		remove = menu.addAction("Harvest Crop")
+
+		#connection
+		remove.triggered.connect(self._harvest_crop)
+
+		#run menu
+		menu.exec_(event.screenPos())
