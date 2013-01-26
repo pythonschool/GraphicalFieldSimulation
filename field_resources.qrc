@@ -1,0 +1,23 @@
+<!DOCTYPE RCC><RCC version="1.0">
+	<qresource>
+		<file alias="wheat_seed.png">images/crops/wheat/seed.png</file>
+		<file alias="wheat_seedling.png">images/crops/wheat/seedling.png</file>
+		<file alias="wheat_young.png">images/crops/wheat/young.png</file>
+		<file alias="wheat_mature.png">images/crops/wheat/mature.png</file>
+		<file alias="wheat_old.png">images/crops/wheat/old.png</file>
+		<file alias="potato_seed.png">images/crops/potato/seed.png</file>
+		<file alias="potato_seedling.png">images/crops/potato/seedling.png</file>
+		<file alias="potato_young.png">images/crops/potato/young.png</file>
+		<file alias="potato_mature.png">images/crops/potato/mature.png</file>
+		<file alias="potato_old.png">images/crops/potato/old.png</file>
+		<file alias="cow_baby.png">images/animals/cow/baby.png</file>
+		<file alias="cow_poor.png">images/animals/cow/poor.png</file>
+		<file alias="cow_fine.png">images/animals/cow/fine.png</file>
+		<file alias="cow_prime.png">images/animals/cow/prime.png</file>
+		<file alias="sheep_baby.png">images/animals/sheep/baby.png</file>
+		<file alias="sheep_poor.png">images/animals/sheep/poor.png</file>
+		<file alias="sheep_fine.png">images/animals/sheep/fine.png</file>
+		<file alias="sheep_prime.png">images/animals/sheep/prime.png</file>
+		<file alias="field_background.png">images/fieldbackground.png</file>
+	</qresource>
+</RCC>
