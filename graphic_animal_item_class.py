@@ -20,6 +20,12 @@ class AnimalGraphicsPixmapItem(FieldItemGraphicsPixmapItem):
 		elif self.animal._status == "Prime":
 			self.setPixmap(QPixmap(self.available_graphics[3]).scaledToWidth(50,1))
 
+	def needs(self):
+		return self.animal.needs()
+
+	def grow(self,feed,water):
+		self.animal.grow(feed,water)
+
 	def _remove_animal(self):
 		self.scene().remove_animal(self)
 

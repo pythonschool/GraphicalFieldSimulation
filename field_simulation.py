@@ -8,7 +8,7 @@ from graphic_cow_item_class import *
 from graphic_sheep_item_class import *
 from graphic_drag_label_class import *
 
-import sys
+import sys, random
 
 class FieldWindow(QMainWindow):
 	"""this class creates a main window to observe the growth of a simulated field"""
@@ -72,10 +72,14 @@ class FieldWindow(QMainWindow):
 		#connections
 		self.field_automatic_grow_button.clicked.connect(self.automatically_grow)
 		self.field_manual_grow_button.clicked.connect(self.manually_grow)
-		self.field_report_button.clicked.connect(self.report)
 
 	def automatically_grow(self):
-		pass
+		for days in range(30):
+			light = random.randint(1,10)
+			water = random.randint(1,10)
+			food = random.randint(1,100)
+			self.field_graphics_view.scene().field.grow(light,water,food)
+		self.field_graphics_view.scene().update_status()
 
 	def manually_grow(self):
 		pass

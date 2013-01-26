@@ -32,6 +32,12 @@ class FieldGraphicsScene(QGraphicsScene):
 		self.field.remove_animal(position) #remove animal from field
 		self.removeItem(animal_to_remove) #remove visual representation
 
+	def update_status(self):
+		for each in self.field._crops:
+			each.update_status()
+		for each in self.field._animals:
+			each.update_status()
+
 	def _drop_position(self,item):
 		cursor_position = QCursor.pos() #global cursor position
 		current_view = self.views()[0]
