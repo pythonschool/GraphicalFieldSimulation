@@ -81,14 +81,14 @@ class FieldWindow(QMainWindow):
 			light = random.randint(1,10)
 			water = random.randint(1,10)
 			food = random.randint(1,100)
-			self.field_graphics_view.scene().field.grow(light,water,food)
+			self.field_graphics_view.scene().field.grow(light,food,water)
 		self.field_graphics_view.scene().update_status()
 
 	def manually_grow(self):
 		dialog = ManualGrowDialog()
 		dialog.exec_()
 		light,water,food = dialog.get_values()
-		self.field_graphics_view.scene().field.grow(light,water,food)
+		self.field_graphics_view.scene().field.grow(light,food,water)
 		self.field_graphics_view.scene().update_status()
 
 	def report(self):
