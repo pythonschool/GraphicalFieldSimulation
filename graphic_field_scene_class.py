@@ -32,6 +32,9 @@ class FieldGraphicsScene(QGraphicsScene):
 		self.field.remove_animal(position) #remove animal from field
 		self.removeItem(animal_to_remove) #remove visual representation
 
+	def report_contents(self):
+		return self.field.report_contents()
+
 	def update_status(self):
 		for each in self.field._crops:
 			each.update_status()

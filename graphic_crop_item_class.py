@@ -27,6 +27,9 @@ class CropGraphicsPixmapItem(FieldItemGraphicsPixmapItem):
 	def grow(self,light,water):
 		self.crop.grow(light,water)
 
+	def report(self):
+		return self.crop.report()
+
 	def contextMenuEvent(self,event):
 		menu = QMenu("Crop")
 		remove = menu.addAction("Harvest Crop")

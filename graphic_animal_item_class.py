@@ -26,6 +26,9 @@ class AnimalGraphicsPixmapItem(FieldItemGraphicsPixmapItem):
 	def grow(self,feed,water):
 		self.animal.grow(feed,water)
 
+	def report(self):
+		return self.animal.report()
+
 	def _remove_animal(self):
 		self.scene().remove_animal(self)
 
