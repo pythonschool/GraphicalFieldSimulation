@@ -7,6 +7,7 @@ from graphic_potato_item_class import *
 from graphic_cow_item_class import *
 from graphic_sheep_item_class import *
 from graphic_drag_label_class import *
+from field_manual_grow_dialog_class import *
 
 import sys, random
 
@@ -82,7 +83,11 @@ class FieldWindow(QMainWindow):
 		self.field_graphics_view.scene().update_status()
 
 	def manually_grow(self):
-		pass
+		dialog = ManualGrowDialog()
+		dialog.exec_()
+		light,water,food = dialog.get_values()
+		self.field_graphics_view.scene().field.grow(light,water,food)
+		self.field_graphics_view.scene().update_status()
 
 def main():
 	field_simulation = QApplication(sys.argv) #create new application
