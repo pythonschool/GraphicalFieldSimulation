@@ -69,6 +69,17 @@ class FieldWindow(QMainWindow):
 		self.main_widget.setLayout(self.layout)
 		self.setCentralWidget(self.main_widget)
 
+		#connections
+		self.field_automatic_grow_button.clicked.connect(self.automatically_grow)
+		self.field_manual_grow_button.clicked.connect(self.manually_grow)
+		self.field_report_button.clicked.connect(self.report)
+
+	def automatically_grow(self):
+		pass
+
+	def manually_grow(self):
+		pass
+
 def main():
 	field_simulation = QApplication(sys.argv) #create new application
 	field_window = FieldWindow() #create new instance of main window
