@@ -1,4 +1,4 @@
-from graphic_animal_class import *
+from graphic_animal_item_class import *
 from cow_class import *
 
 import field_resources
