@@ -9,7 +9,7 @@ class QDragLabel(QLabel):
 	#constructor
 	def __init__(self,picture):
 		super().__init__()
-		self.setPixmap(picture.scaledToWidth(25,1))
+		self.setPixmap(picture.scaledToWidth(35,1))
 
 	def mouseMoveEvent(self,event):
 		#if the left mouse button is used

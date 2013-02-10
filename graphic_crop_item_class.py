@@ -11,15 +11,15 @@ class CropGraphicsPixmapItem(FieldItemGraphicsPixmapItem):
 
 	def update_status(self):
 		if self.crop._status == "Seed":
-			self.setPixmap(QPixmap(self.available_graphics[0]).scaledToWidth(25,1))
+			self.setPixmap(QPixmap(self.available_graphics[0]).scaledToWidth(50,1))
 		elif self.crop._status == "Seedling":
-			self.setPixmap(QPixmap(self.available_graphics[1]).scaledToWidth(25,1))
+			self.setPixmap(QPixmap(self.available_graphics[1]).scaledToWidth(50,1))
 		elif self.crop._status == "Young":
-			self.setPixmap(QPixmap(self.available_graphics[2]).scaledToWidth(25,1))
+			self.setPixmap(QPixmap(self.available_graphics[2]).scaledToWidth(50,1))
 		elif self.crop._status == "Mature":
-			self.setPixmap(QPixmap(self.available_graphics[3]).scaledToWidth(25,1))
+			self.setPixmap(QPixmap(self.available_graphics[3]).scaledToWidth(50,1))
 		elif self.crop._status == "Old":
-			self.setPixmap(QPixmap(self.available_graphics[4]).scaledToWidth(25,1))	
+			self.setPixmap(QPixmap(self.available_graphics[4]).scaledToWidth(50,1))	
 
 	def _harvest_crop(self):
 		self.scene().harvest_crop(self)
