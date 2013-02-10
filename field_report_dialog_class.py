@@ -63,7 +63,7 @@ class FieldReportDialog(QDialog):
 					self.report_layout.addWidget(QLabel(str(animal["weight"])),row,3)
 					row += 1
 			else:
-				self.report_layout.addWidget(self.no_crops_label,row,0)
+				self.report_layout.addWidget(self.no_animals_label,row,0)
 
 		self.layout.addLayout(self.report_layout)
 		self.layout.addWidget(self.close_button)
