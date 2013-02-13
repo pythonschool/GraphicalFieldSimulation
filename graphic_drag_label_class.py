@@ -8,7 +8,7 @@ class QDragLabel(QLabel):
 	#constructor
 	def __init__(self,picture):
 		super().__init__()
-		self.setPixmap(picture.scaledToWidth(25,1))
+		self.setPixmap(picture.scaledToWidth(35,1))
 
 class WheatDragLabel(QDragLabel):
 	"""this class provides an wheat label that can be dragged and dropped"""
