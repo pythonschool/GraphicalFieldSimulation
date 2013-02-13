@@ -6,7 +6,7 @@ class AnimalGraphicsPixmapItem(FieldItemGraphicsPixmapItem):
 	#constructor
 	def __init__(self, graphics_list):
 		super().__init__(graphics_list)
-		self.setPixmap(self.current_graphic.scaledToWidth(50,1))
+		self.setPixmap(self.current_graphic.scaledToWidth(80,1))
 
 		self.animal = None
 
