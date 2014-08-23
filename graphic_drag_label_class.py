@@ -1,5 +1,10 @@
-from PyQt4.QtGui import QLabel, QPixmap, QDrag
-from PyQt4.QtCore import *
+try:
+    from PyQt4.QtGui import QLabel, QPixmap, QDrag
+    from PyQt4.QtCore import *
+except:
+    from PyQt5.QtWidgets import QLabel
+    from PyQt5.QtGui import QPixmap, QDrag
+    from PyQt5.QtCore import *
 
 import field_resources
 
@@ -20,7 +25,10 @@ class QDragLabel(QLabel):
             drag = QDrag(self)
             drag.setMimeData(mime_data)
             drag.setHotSpot(self.rect().topLeft()) #where do we drag from
-            drop_action = drag.start(Qt.MoveAction) #drag starts
+            if QT_VERSION_STR < '5':
+                drop_action = drag.start(Qt.MoveAction) #drag starts
+            else:
+                drop_action = drag.exec(Qt.MoveAction) #drag starts
 
 class WheatDragLabel(QDragLabel):
     """this class provides an wheat label that can be dragged and dropped"""

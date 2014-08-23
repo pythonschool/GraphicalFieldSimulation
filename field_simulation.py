@@ -1,5 +1,9 @@
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+try:
+    from PyQt4.QtCore import *
+    from PyQt4.QtGui import *
+except:
+    from PyQt5.QtCore import *
+    from PyQt5.QtWidgets import *
 
 from graphic_field_scene_class import *
 from graphic_wheat_item_class import *

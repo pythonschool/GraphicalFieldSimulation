@@ -1,4 +1,8 @@
-from PyQt4.QtGui import *
+try:
+    from PyQt4.QtGui import *
+except:
+    from PyQt5.QtWidgets import *
+    from PyQt5.QtGui import *
 
 from field_class import *
 from graphic_wheat_item_class import *

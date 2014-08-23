@@ -1,4 +1,7 @@
-from PyQt4.QtGui import *
+try:
+    from PyQt4.QtGui import *
+except:
+    from PyQt5.QtWidgets import *
 
 class FieldReportDialog(QDialog):
     """this class creates a report for the field in dialog form"""
